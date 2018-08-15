@@ -80,3 +80,12 @@ input{
     border-color: #fff;
     color: #fff;
 }
+
+#registro {
+    width: 126px;
+    /* background-color: black; */
+    float: left;
+    margin-top: 15px;
+    font-weight: bold;
+    /* display: inline-block; */
+}
