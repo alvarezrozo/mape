@@ -44,7 +44,6 @@ body{
 .submenu_container{
 	width: 100%
 	height: auto;
-	text-align: center;
 }
 
 .menu_but {
@@ -54,4 +53,11 @@ body{
     background-color: #fff;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 36px;
+    padding-top: 32px;
+}
+
+
+.nav_tex{
+	font-size: 30px;
 }
