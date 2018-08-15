@@ -31,7 +31,7 @@ p{
 
 .centerico {
     width: 110px;
-    margin: 16%;
+    margin: 7%;
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -49,33 +49,34 @@ p{
 input{
     height: 38px;
     margin-top: 15px;
-    font-family: 'Raleway', sans-serif;
-    border-radius: 7px;
+    font-family: 'Josefin Sans';
 }
 
 .input {
     display: block;
     width: 100%;
     border: solid;
-    padding-left: 25px;
+    padding-left: 18px;
+    padding-top: 3px;
     border-width: 0px;
-    font-size: 14px;
-    box-shadow: inset 3px 3px 11px;
+    font-size: 18px;
+    box-shadow: inset 0px 0px 0px;
 }
 
 .button_intro {
     width: 38%;
     float: right;
-    background-color: #00b0f0;
-    color: white;
+    background-color: #ffffff;
+    color: #ff0066;
     border: solid;
     border-width: 0px;
     font-weight: bold;
+    border-radius: 6px;
 }
 
-.button_intro:hover{
-    background-color: white;
+.button_intro:hover {
+    background-color: #ff0066;
     border-width: 2px;
-    border-color: #00b0f0;
-    color: #00b0f0;
+    border-color: #fff;
+    color: #fff;
 }
