@@ -52,9 +52,18 @@ body{
     margin-left: auto;
     margin-right: auto;
     padding-left: 36px;
+    padding-right: 36px;
     padding-top: 32px;
 }
 
-.nav_tex{
-	font-size: 30px;
+.nav_tex {
+    font-size: 30px;
+    width: 241px;
+    float: left;
+}
+
+.ico_sub {
+    color: #f06;
+    float: right;
+    font-size: 40px;
 }
