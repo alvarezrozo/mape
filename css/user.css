@@ -18,9 +18,9 @@ body{
 .button_container {
     width: 100%;
     height: 40px;
-    /*background-color: #000;*/
+    /* background-color: #000; */
     margin-top: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 34px;
     /* margin: 1%; */
     /* margin-right: 1%; */
     /* margin-left: 1%; */
@@ -40,10 +40,11 @@ body{
 }
 
 .form_container{
-    width: 99%;
+    width: 94%;
     margin-left: auto;
     margin-right: auto;
-    background-color: black;
+    text-align: center;
+    /*background-color: black;*/
 }
 
 input {
@@ -52,4 +53,20 @@ input {
     border-bottom-width: 2px;
     border-bottom-color: #f06;
     padding-left: 10px;
+    margin-bottom: 18px;
+    height: 34px;
+    width: 100%;
+}
+
+.profile_picture {
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid;
+    border-width: 0px;
+    border-bottom-width: 0px;
+    border-bottom-color: #f06;
+    padding: 0px;
+    border-radius: 78px;
 }
