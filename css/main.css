@@ -3,14 +3,6 @@
 	padding: 0;
 }
 
-a{
-    cursor: auto;
-}
-
-a:link   
-{   
- text-decoration:none;   
-}  
 
 body{
     background-size: cover;

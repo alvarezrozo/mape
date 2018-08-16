@@ -9,7 +9,8 @@
 
 body{
     background-size: cover;
-    background-color: #ff0066;
+    background-color: #fff;
+    /*background-color: #ff0066;*/
     /*text-align: center;*/
     font-family: 'Josefin Sans';
 }
@@ -27,17 +28,17 @@ body{
 
 #menu_des {
     font-size: 44px;
-    color: #fff;
+    color: #f06;
     float: left;
     margin-left: 15px;
-}
-
-#menu_user {
-    font-size: 44px;
-    color: #fff;
-    float: right;
     margin-right: 15px;
 }
+
+.title_page {
+    font-size: 27px;
+    color: #f06;
+}
+
 
 .submenu_container{
 	width: 100%
