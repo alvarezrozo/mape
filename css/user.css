@@ -39,32 +39,17 @@ body{
     color: #f06;
 }
 
-
-.submenu_container{
-	width: 100%
-	height: auto;
-}
-
-.menu_but {
-    width: 96%;
-    height: 103px;
-    margin-bottom: 22px;
-    background-color: #fff;
+.form_container{
+    width: 99%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 36px;
-    padding-right: 36px;
-    padding-top: 32px;
+    background-color: black;
 }
 
-.nav_tex {
-    font-size: 30px;
-    width: 241px;
-    float: left;
-}
-
-.ico_sub {
-    color: #f06;
-    float: right;
-    font-size: 40px;
+input {
+    border: solid;
+    border-width: 0px;
+    border-bottom-width: 2px;
+    border-bottom-color: #f06;
+    padding-left: 10px;
 }
