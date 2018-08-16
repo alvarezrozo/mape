@@ -26,17 +26,15 @@ body{
 }
 
 #menu_des {
-    height: 40px;
-    width: 40px;
-    background-color: #fff;
+    font-size: 44px;
+    color: #fff;
     float: left;
     margin-left: 15px;
 }
 
 #menu_user {
-    height: 40px;
-    width: 40px;
-    background-color: #fff;
+    font-size: 44px;
+    color: #fff;
     float: right;
     margin-right: 15px;
 }
@@ -56,7 +54,6 @@ body{
     padding-left: 36px;
     padding-top: 32px;
 }
-
 
 .nav_tex{
 	font-size: 30px;
