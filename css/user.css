@@ -63,5 +63,14 @@ input {
     width: 100px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 23px;
     border-radius: 78px;
+}
+
+.menu_check {
+    font-size: 44px;
+    color: #f06;
+    float: right;
+    margin-left: 15px;
+    margin-right: 15px;
 }
