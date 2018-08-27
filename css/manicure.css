@@ -60,7 +60,7 @@ body{
 
 .name_rat_container{
     height: 84px;
-    width: 60%;
+    width: 50%;
     display: inline-block;
     margin-left: 10px;
 }
@@ -88,3 +88,9 @@ body{
     color:#fff;
 }
 
+.money {
+    float: right;
+    width: 22%;
+    height: 84px;
+    padding-top: 30px;
+}
