@@ -43,20 +43,48 @@ body{
     background-color: #f06;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 36px;
-    padding-right: 36px;
-    padding-top: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
 }
 
-.nav_tex {
-    font-size: 30px;
-    width: 241px;
-    float: left;
+.profile_picture {
+    height: 84px;
+    width: 84px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 23px;
+    border-radius: 78px;
+    float:left;
+}
+
+.name_rat_container{
+    height: 84px;
+    width: 60%;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.name {
+    height: 42px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.rating{
+    height: 42px;
+    width: 100%;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.map_name{
+    color: #fff;
+    font-family: 'Josefin Sans';
+    font-size: 20px;
+}
+
+.ico_rat{
     color:#fff;
 }
 
-.ico_sub {
-    color: #fff;
-    float: right;
-    font-size: 40px;
-}
