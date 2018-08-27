@@ -58,12 +58,15 @@ input{
 .button_intro {
     width: 38%;
     float: right;
+    height: 37px;
     background-color: #ffffff;
     color: #ff0066;
     border: solid;
     border-width: 0px;
     font-weight: bold;
     border-radius: 6px;
+    margin-top: 15px;
+    padding-top: 8px;
 }
 
 .button_intro:hover {
