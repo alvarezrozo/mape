@@ -6,3 +6,7 @@ $( "#history" ).click(function() {
   location.href="history.html";
 });
 
+$( "#dates" ).click(function() {
+  location.href="dates.html";
+});
+
