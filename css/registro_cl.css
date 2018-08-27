@@ -58,13 +58,9 @@ input {
     width: 100%;
 }
 
-.profile_picture {
-    height: 100px;
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 23px;
-    border-radius: 78px;
+.camico {
+    font-size: 88px;
+    color: #f06;
 }
 
 .menu_check {
