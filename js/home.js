@@ -1,7 +1,4 @@
-$( "#mani" ).click(function() {
-  location.href="manicure.html";
+$( "#service" ).click(function() {
+  location.href="service.html";
 });
 
-$( "#pedi" ).click(function() {
-  location.href="pedicure.html";
-});
