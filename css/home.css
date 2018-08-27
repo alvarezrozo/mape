@@ -9,7 +9,6 @@
 
 body{
     background-size: cover;
-    background-color: #ff0066;
     /*text-align: center;*/
     font-family: 'Josefin Sans';
 }
@@ -27,14 +26,14 @@ body{
 
 #menu_des {
     font-size: 44px;
-    color: #fff;
+    color: #f06;
     float: left;
     margin-left: 15px;
 }
 
 #menu_user {
     font-size: 44px;
-    color: #fff;
+    color: #f06;
     float: right;
     margin-right: 15px;
 }
@@ -48,7 +47,7 @@ body{
     width: 96%;
     height: 103px;
     margin-bottom: 22px;
-    background-color: #fff;
+    background-color: #f06;
     margin-left: auto;
     margin-right: auto;
     padding-left: 36px;
@@ -60,10 +59,11 @@ body{
     font-size: 30px;
     width: 241px;
     float: left;
+    color:#fff;
 }
 
 .ico_sub {
-    color: #f06;
+    color: #fff;
     float: right;
     font-size: 40px;
 }
