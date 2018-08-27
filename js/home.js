@@ -10,3 +10,7 @@ $( "#dates" ).click(function() {
   location.href="dates.html";
 });
 
+$( "#rating" ).click(function() {
+  location.href="rating.html";
+});
+
