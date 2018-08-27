@@ -45,4 +45,10 @@ body{
     padding-left: 36px;
     padding-right: 36px;
     padding-top: 32px;
+    text-align: center;
+}
+
+.nav_tex {
+    font-size: 30px;
+    color: #fff;
 }
