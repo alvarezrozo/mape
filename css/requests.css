@@ -26,7 +26,7 @@ body{
 
 #menu_back {
     font-size: 44px;
-    color: #f06;
+    color: #36f;
     float: left;
     margin-left: 15px;
     margin-right: 15px;
@@ -34,7 +34,7 @@ body{
 
 .title_page {
     font-size: 27px;
-    color: #f06;
+    color: #36f;
 }
 
 .submenu_container{
@@ -46,7 +46,7 @@ body{
     width: 96%;
     height: 103px;
     margin-bottom: 22px;
-    background-color: #f06;
+    background-color: #36f;
     margin-left: auto;
     margin-right: auto;
     padding-left: 10px;
@@ -96,14 +96,17 @@ body{
     font-size: 18px;
     font-weight: bold;
 }
-
-.ico_rat{
-    color:#fff;
+.ico_sub {
+    color: #fff;
+    float: right;
+    font-size: 40px;
+    margin-right: 12px;
 }
 
-.money {
+.icos {
     float: right;
     width: 22%;
     height: 84px;
-    padding-top: 30px;
+    padding-top: 21px;
+    /* margin-left: 65px; */
 }

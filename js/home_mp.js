@@ -1,5 +1,5 @@
 $( "#service" ).click(function() {
-    location.href="service_mp.html";
+    location.href="requests.html";
   });
   
   $( "#history" ).click(function() {
