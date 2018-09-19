@@ -3,10 +3,6 @@
 	padding: 0;
 }
 
-/*a{
-    cursor: auto;
-}*/
-
 body{
     background-size: cover;
     /*text-align: center;*/
@@ -28,14 +24,14 @@ body{
 
 #menu_des {
     font-size: 44px;
-    color: #f06;
+    color: #36f;
     float: left;
     margin-left: 15px;
 }
 
 #menu_user {
     font-size: 44px;
-    color: #f06;
+    color: #36f;
     float: right;
     margin-right: 15px;
 }
@@ -46,19 +42,17 @@ body{
 }
 
 .titulo {
-    color: #f06;
+    color: #36f;
     font-family: 'Indie Flower';
     font-size: 52px;
     display: inline-block;
-    /* padding-bottom: 3px; */
-    /* text-align: center; */
 }
 
 .menu_but {
     width: 96%;
     height: 103px;
     margin-bottom: 14px;
-    background-color: #f06;
+    background-color: #36f;
     margin-left: auto;
     margin-right: auto;
     padding-left: 36px;
@@ -79,4 +73,20 @@ body{
     color: #fff;
     float: right;
     font-size: 40px;
+}
+
+.notification {
+    background-color: #fff;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    padding-top: 6px;
+    text-align: center;
+    float: right;
+}
+
+.number_not {
+    font-size: 21px;
+    color: #36f;
+    font-weight: bold;
 }
