@@ -31,7 +31,7 @@ body{
     margin-left: 15px;
 }
 .submenu_container{
-	width: 100%
+	width: 100%;
 	height: auto;
 }
 
@@ -46,6 +46,8 @@ body{
     padding-right: 36px;
     padding-top: 77px;
     text-align: center;
+    border-radius: 20px;
+    box-shadow: 10px 12px 35px;
 }
 
 .nav_tex {
