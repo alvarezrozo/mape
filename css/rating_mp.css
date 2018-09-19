@@ -26,7 +26,7 @@ body{
 
 #menu_back {
     font-size: 44px;
-    color: #f06;
+    color: #36f;
     float: left;
     margin-left: 15px;
     margin-right: 15px;
@@ -34,7 +34,7 @@ body{
 
 .title_page {
     font-size: 27px;
-    color: #f06;
+    color: #36f;
 }
 
 .submenu_container{
@@ -45,7 +45,7 @@ body{
 .menu_but {
     width: 96%;
     margin-bottom: 22px;
-    background-color: #f06;
+    background-color: #36f;
     margin-left: auto;
     margin-right: auto;
     padding-left: 10px;
@@ -105,11 +105,11 @@ body{
 
 .ico_rat_gl{
     font-size: 30px;
-    color: #f06;
+    color: #36f;
 }
 
 .global_text {
-    color: #f06;
+    color: #36f;
     font-family: 'Josefin Sans';
     font-size: 20px;
     display: inline-block;
