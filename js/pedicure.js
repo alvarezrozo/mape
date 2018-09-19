@@ -1,3 +1,3 @@
-$( "#mani" ).click(function() {
-    location.href="manicure.html";
+$( "#id_maper_1" ).click(function() {
+    location.href="service_details.html?id=1";
 });
