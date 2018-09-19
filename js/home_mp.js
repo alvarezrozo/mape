@@ -1,17 +1,17 @@
 $( "#service" ).click(function() {
-    location.href="service.html";
+    location.href="service_mp.html";
   });
   
   $( "#history" ).click(function() {
-    location.href="history.html";
+    location.href="history_mp.html";
   });
   
   $( "#dates" ).click(function() {
-    location.href="dates.html";
+    location.href="dates_mp.html";
   });
   
   $( "#rating" ).click(function() {
-    location.href="rating.html";
+    location.href="rating_mp.html";
   });
   
   
