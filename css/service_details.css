@@ -55,7 +55,8 @@ input {
     padding-left: 10px;
     margin-bottom: 18px;
     height: 34px;
-    width: 100%;
+    width: auto;
+    display: inline-block
 }
 
 .profile_picture {
@@ -77,4 +78,9 @@ input {
 
 .sub-title{
     color: #999;
+}
+
+.date{
+    display: inline-block;
+    margin-right: 15px;
 }
