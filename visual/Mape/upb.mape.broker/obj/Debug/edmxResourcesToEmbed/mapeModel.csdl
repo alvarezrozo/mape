@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mapeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="comments_mapers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idMaper" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="message" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="value" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="maper" Relationship="Self.FK_comments_mapers_mapers" FromRole="comments_mapers" ToRole="mapers" />
+  </EntityType>
+  <EntityType Name="comments_users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idClient" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="message" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="value" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="user" Relationship="Self.FK_comments_users_users" FromRole="comments_users" ToRole="users" />
+  </EntityType>
+  <EntityType Name="date">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idClient" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="idMaper" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="date1" Type="DateTime" Precision="0" />
+    <Property Name="hour" Type="Time" Precision="7" />
+    <Property Name="status" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="user" Relationship="Self.FK_dates_dates" FromRole="dates" ToRole="users" />
+    <NavigationProperty Name="maper" Relationship="Self.FK_dates_mapers" FromRole="dates" ToRole="mapers" />
+  </EntityType>
+  <EntityType Name="maper">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="city" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cell" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="implements" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="comments_mapers" Relationship="Self.FK_comments_mapers_mapers" FromRole="mapers" ToRole="comments_mapers" />
+    <NavigationProperty Name="dates" Relationship="Self.FK_dates_mapers" FromRole="mapers" ToRole="dates" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="city" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cell" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="implements" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="comments_users" Relationship="Self.FK_comments_users_users" FromRole="users" ToRole="comments_users" />
+    <NavigationProperty Name="dates" Relationship="Self.FK_dates_dates" FromRole="users" ToRole="dates" />
+  </EntityType>
+  <Association Name="FK_comments_mapers_mapers">
+    <End Role="mapers" Type="Self.maper" Multiplicity="1" />
+    <End Role="comments_mapers" Type="Self.comments_mapers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mapers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="comments_mapers">
+        <PropertyRef Name="idMaper" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_comments_users_users">
+    <End Role="users" Type="Self.user" Multiplicity="1" />
+    <End Role="comments_users" Type="Self.comments_users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="comments_users">
+        <PropertyRef Name="idClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dates_dates">
+    <End Role="users" Type="Self.user" Multiplicity="1" />
+    <End Role="dates" Type="Self.date" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="dates">
+        <PropertyRef Name="idClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dates_mapers">
+    <End Role="mapers" Type="Self.maper" Multiplicity="1" />
+    <End Role="dates" Type="Self.date" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mapers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="dates">
+        <PropertyRef Name="idMaper" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="mapeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="comments_mapers" EntityType="Self.comments_mapers" />
+    <EntitySet Name="comments_users" EntityType="Self.comments_users" />
+    <EntitySet Name="dates" EntityType="Self.date" />
+    <EntitySet Name="mapers" EntityType="Self.maper" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <AssociationSet Name="FK_comments_mapers_mapers" Association="Self.FK_comments_mapers_mapers">
+      <End Role="mapers" EntitySet="mapers" />
+      <End Role="comments_mapers" EntitySet="comments_mapers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_comments_users_users" Association="Self.FK_comments_users_users">
+      <End Role="users" EntitySet="users" />
+      <End Role="comments_users" EntitySet="comments_users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dates_dates" Association="Self.FK_dates_dates">
+      <End Role="users" EntitySet="users" />
+      <End Role="dates" EntitySet="dates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dates_mapers" Association="Self.FK_dates_mapers">
+      <End Role="mapers" EntitySet="mapers" />
+      <End Role="dates" EntitySet="dates" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

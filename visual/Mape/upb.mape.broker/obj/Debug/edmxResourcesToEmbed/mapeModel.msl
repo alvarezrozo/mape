@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mapeModelStoreContainer" CdmEntityContainer="mapeEntities">
+    <EntitySetMapping Name="comments_mapers">
+      <EntityTypeMapping TypeName="mapeModel.comments_mapers">
+        <MappingFragment StoreEntitySet="comments_mapers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idMaper" ColumnName="idMaper" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="value" ColumnName="value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comments_users">
+      <EntityTypeMapping TypeName="mapeModel.comments_users">
+        <MappingFragment StoreEntitySet="comments_users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idClient" ColumnName="idClient" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="value" ColumnName="value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dates">
+      <EntityTypeMapping TypeName="mapeModel.date">
+        <MappingFragment StoreEntitySet="dates">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idClient" ColumnName="idClient" />
+          <ScalarProperty Name="idMaper" ColumnName="idMaper" />
+          <ScalarProperty Name="date1" ColumnName="date" />
+          <ScalarProperty Name="hour" ColumnName="hour" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mapers">
+      <EntityTypeMapping TypeName="mapeModel.maper">
+        <MappingFragment StoreEntitySet="mapers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="cell" ColumnName="cell" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="implements" ColumnName="implements" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="mapeModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="cell" ColumnName="cell" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="implements" ColumnName="implements" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
