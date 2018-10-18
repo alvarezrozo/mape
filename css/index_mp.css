@@ -1,0 +1,90 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+body{
+    background-size: cover;
+    background-color: #36f;
+    text-align: center;
+    font-family: 'Josefin Sans';
+}
+
+a{
+    color: #f06;
+}
+
+p{
+    font-family: 'Josefin Sans';
+}
+
+.titulo{
+    color: white;
+    font-family: 'Indie Flower';
+    font-size: 55px;
+}
+
+.centerico {
+    width: 110px;
+    margin: 7%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    filter: grayscale(100%);
+}
+
+.form_container {
+    width: 263px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 182px;
+}
+
+
+input{
+    height: 38px;
+    margin-top: 15px;
+    font-family: 'Josefin Sans';
+}
+
+.input {
+    display: block;
+    width: 100%;
+    border: solid;
+    padding-left: 18px;
+    padding-top: 3px;
+    border-width: 0px;
+    font-size: 18px;
+    box-shadow: inset 0px 0px 0px;
+}
+
+.button_intro {
+    width: 38%;
+    float: right;
+    height: 37px;
+    background-color: #ffffff;
+    color: #36f;
+    border: solid;
+    border-width: 0px;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-top: 15px;
+    padding-top: 8px;
+}
+
+.button_intro:hover {
+    background-color: #36f;
+    border-width: 2px;
+    border-color: #fff;
+    color: #fff;
+}
+
+#registro {
+    width: 126px;
+    /* background-color: black; */
+    float: left;
+    margin-top: 15px;
+    font-weight: bold;
+    /* display: inline-block; */
+}
