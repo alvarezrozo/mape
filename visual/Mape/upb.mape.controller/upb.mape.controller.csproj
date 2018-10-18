@@ -49,8 +49,10 @@
   <ItemGroup>
     <Compile Include="Dates.cs" />
     <Compile Include="Mapers.cs" />
+    <Compile Include="MapersComments.cs" />
     <Compile Include="Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsersComments.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

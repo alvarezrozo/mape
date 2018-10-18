@@ -9,3 +9,14 @@ C:\Users\Andres\Source\repos\Mape\upb.mape.entity\obj\Debug\upb.mape.entity.cspr
 C:\Users\Andres\Source\repos\Mape\upb.mape.entity\obj\Debug\upb.mape.entity.csproj.CoreCompileInputs.cache
 C:\Users\Andres\Source\repos\Mape\upb.mape.entity\obj\Debug\upb.mape.entity.dll
 C:\Users\Andres\Source\repos\Mape\upb.mape.entity\obj\Debug\upb.mape.entity.pdb
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\bin\Debug\upb.mape.entity.dll.config
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\bin\Debug\upb.mape.entity.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\bin\Debug\upb.mape.entity.pdb
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\bin\Debug\EntityFramework.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\bin\Debug\EntityFramework.xml
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\obj\Debug\upb.mape.entity.csprojResolveAssemblyReference.cache
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\obj\Debug\upb.mape.entity.csproj.CoreCompileInputs.cache
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\obj\Debug\upb.mape.entity.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\obj\Debug\upb.mape.entity.pdb
