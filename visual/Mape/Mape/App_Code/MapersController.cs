@@ -26,6 +26,18 @@ public class MapersController : ApiController
         return maper;
     }
 
+    public EN.Result Get(String username, String password)
+    {
+        bool result = controller.authenticateMaper(username, password);
+
+        var answer = new EN.Result()
+        {
+            Answer = result
+        };
+
+        return answer;
+    }
+
     // POST api/<controller>
     public void Post(EN.Maper maper)
     {

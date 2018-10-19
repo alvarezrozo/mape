@@ -62,7 +62,6 @@ namespace upb.mape.controller
                 finded_maper.Username = maper.username;
                 finded_maper.Name = maper.name;
                 finded_maper.Fullname = maper.last_name;
-                finded_maper.Password = maper.password;
                 finded_maper.Address = maper.address;
                 finded_maper.Email = maper.mail;
                 finded_maper.Phone = maper.cell;
@@ -89,6 +88,25 @@ namespace upb.mape.controller
 
                 throw ex;
             }
+        }
+
+        public bool authenticateMaper(String username, String password)
+        {
+            bool result = false;
+
+            try
+            {
+                DA.maper maper = db.mapers.Where(x => x.username == username && x.password == password).First();
+
+                result = true;
+
+            }
+            catch (InvalidOperationException ex)
+            {
+                result = false;
+            }
+
+            return result;
         }
 
         public bool editMaper(EN.Maper maper)

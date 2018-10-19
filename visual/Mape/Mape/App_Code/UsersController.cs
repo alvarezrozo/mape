@@ -28,6 +28,18 @@ public class UsersController : ApiController
         return finded_user;
     }
 
+    public EN.Result Get(String username, String password)
+    {
+        bool result = controller.authenticateUser(username, password);
+
+        var answer = new EN.Result()
+        {
+            Answer = result
+        };
+
+        return answer;
+    }
+
     // POST api/<controller>
     public void Post(EN.User user)
     {

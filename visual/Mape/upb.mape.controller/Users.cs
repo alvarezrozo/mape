@@ -16,7 +16,6 @@ namespace upb.mape.controller
         public bool createUser(EN.User user)
         {
 
-
             bool result = false;
 
             try
@@ -36,7 +35,6 @@ namespace upb.mape.controller
                 };
 
                 db.users.Add(datos);
-
                 db.SaveChanges();
 
                 result = true;
@@ -54,7 +52,7 @@ namespace upb.mape.controller
         {
             try
             {
-                DA.user user = db.users.Where(x => x.username == username).First();
+                DA.user user = db.users.Where(x => x.username == username).FirstOrDefault();
 
                 EN.User finded_user = new EN.User();
 
@@ -62,7 +60,6 @@ namespace upb.mape.controller
                 finded_user.Username = user.username;
                 finded_user.Name = user.name;
                 finded_user.Fullname = user.last_name;
-                finded_user.Password = user.password;
                 finded_user.Address = user.address;
                 finded_user.Email = user.mail;
                 finded_user.Phone = user.cell;
@@ -87,8 +84,29 @@ namespace upb.mape.controller
                 finded_user.Items = null;
                 finded_user.City = null;
 
+                return finded_user;
                 throw ex;
             }
+        }
+
+        public bool authenticateUser(String username, String password)
+        {
+            bool result = false;
+
+            try
+            {
+                DA.user user = db.users.Where(x => x.username == username && x.password == password).First();
+
+                result=true;
+
+            }
+            catch (InvalidOperationException ex)
+            {
+
+                result = false;
+            }
+
+            return result;
         }
 
         public bool editUser(EN.User user)
