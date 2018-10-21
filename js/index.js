@@ -23,13 +23,15 @@ $( "#intro" ).click(function() {
 	$.ajax({
 	    type: 'GET',
 	    dataType: 'jsonp',
-	    url: 'http://projectmape.azurewebsites.net/api/Users/?username=andresa&password=prueba',
+	    url: 'http://projectmape.azurewebsites.net/api/Users/?username='+username+'&password='+psw,
         contentType: "application/json; charset=utf-8",
         success: function (data) {
-	        if (data != null) {
-
-	            alert("HOLAAAAA");                   
-	        }
+			if(data.Answer){
+	    		location.href="home.html?id=22";
+	    	}else{
+	    		alert("Usario o contraseña incorrectos");
+	    	}
+	        
 	    }
 	});
 });
