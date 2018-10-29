@@ -1,0 +1,11 @@
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\bin\Release\upb.mape.entity.dll.config
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\bin\Release\upb.mape.entity.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\bin\Release\upb.mape.entity.pdb
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\bin\Release\EntityFramework.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\bin\Release\EntityFramework.xml
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\obj\Release\upb.mape.entity.csprojResolveAssemblyReference.cache
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\obj\Release\upb.mape.entity.csproj.CoreCompileInputs.cache
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\obj\Release\upb.mape.entity.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.entity\obj\Release\upb.mape.entity.pdb

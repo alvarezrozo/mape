@@ -27,5 +27,9 @@ namespace upb.mape.entity
         public String Items { get; set; }
 
         public String City { get; set; }
+
+        public decimal? Cost { get; set; }
+
+        public decimal? Rate { get; set; }
     }
 }

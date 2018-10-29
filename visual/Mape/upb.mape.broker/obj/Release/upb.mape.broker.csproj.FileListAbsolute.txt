@@ -1,0 +1,11 @@
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\bin\Release\upb.mape.broker.dll.config
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\bin\Release\upb.mape.broker.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\bin\Release\upb.mape.broker.pdb
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\bin\Release\EntityFramework.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\bin\Release\EntityFramework.xml
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\obj\Release\upb.mape.broker.csprojResolveAssemblyReference.cache
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\obj\Release\upb.mape.broker.csproj.CoreCompileInputs.cache
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\obj\Release\upb.mape.broker.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\obj\Release\upb.mape.broker.pdb

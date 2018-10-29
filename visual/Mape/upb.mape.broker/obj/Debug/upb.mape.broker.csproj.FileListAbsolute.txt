@@ -9,3 +9,14 @@ C:\Users\Andres\Source\repos\Mape\upb.mape.broker\obj\Debug\upb.mape.broker.cspr
 C:\Users\Andres\Source\repos\Mape\upb.mape.broker\obj\Debug\upb.mape.broker.csproj.CoreCompileInputs.cache
 C:\Users\Andres\Source\repos\Mape\upb.mape.broker\obj\Debug\upb.mape.broker.dll
 C:\Users\Andres\Source\repos\Mape\upb.mape.broker\obj\Debug\upb.mape.broker.pdb
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\bin\Debug\upb.mape.broker.dll.config
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\bin\Debug\upb.mape.broker.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\bin\Debug\upb.mape.broker.pdb
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\bin\Debug\EntityFramework.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\bin\Debug\EntityFramework.xml
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\obj\Debug\upb.mape.broker.csprojResolveAssemblyReference.cache
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\obj\Debug\upb.mape.broker.csproj.CoreCompileInputs.cache
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\obj\Debug\upb.mape.broker.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.broker\obj\Debug\upb.mape.broker.pdb
