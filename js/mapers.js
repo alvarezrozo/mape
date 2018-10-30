@@ -3,7 +3,7 @@ $( "#id_maper_1" ).click(function() {
 });
 
 $(document).load(function() {
-	var iduser = $("#user").val();
+	var iduser = $.getURLParam("id");
 	$.ajax({
 	    type: 'GET',
 	    dataType: 'json',
