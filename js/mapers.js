@@ -11,7 +11,7 @@ $(document).ready(function() {
       success: function (data) {
 			     console.log(data);
            for(i in data){
-             console.log(data[i])
+             console.log(data[i].Fullname);
            }
 	    }
 	});
