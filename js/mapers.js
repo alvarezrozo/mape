@@ -1,6 +1,9 @@
-$( "#intro" ).click(function() {
-	var username = $("#user").val();
-	var psw = $("#pass").val();
+$( "#id_maper_1" ).click(function() {
+    location.href="service_details.html?id=1";
+});
+
+$(document).load(function() {
+	var iduser = $("#user").val();
 	$.ajax({
 	    type: 'GET',
 	    dataType: 'json',

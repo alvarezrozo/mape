@@ -1,5 +1,5 @@
 $( "#service" ).click(function() {
-  location.href="service.html";
+  location.href="mapers.html";
 });
 
 $( "#history" ).click(function() {
@@ -13,4 +13,3 @@ $( "#dates" ).click(function() {
 $( "#rating" ).click(function() {
   location.href="rating.html";
 });
-
