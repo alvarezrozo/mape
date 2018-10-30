@@ -19,32 +19,19 @@ public class UsersController : ApiController
     }
 
     // GET api/<controller>/5
-    public EN.User Get(String username)
+
+    public EN.User Get(decimal? id)
     {
-        EN.User finded_user = new EN.User();
+        EN.User result = controller.authenticateUser(id);
 
-        finded_user = controller.getUser(username);
-
-        return finded_user;
+        return result;
     }
 
-    public EN.Result Get(String username, String password)
+    public EN.User Get(String username, String password)
     {
-        bool result = controller.authenticateUser(username, password);
+        EN.User result = controller.getUser(username, password);
 
-        String response = "False";
-
-        if (result)
-        {
-            response = "True";
-        }
-
-        var answer = new EN.Result()
-        {
-            Answer = response
-        };
-
-        return answer;
+        return result;
     }
 
     // POST api/<controller>

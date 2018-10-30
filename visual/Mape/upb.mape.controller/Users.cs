@@ -48,11 +48,53 @@ namespace upb.mape.controller
             return result;
         }
 
-        public EN.User getUser(String username)
+        public EN.User getUser(String username, String password)
         {
             try
             {
-                DA.user user = db.users.Where(x => x.username == username).FirstOrDefault();
+                DA.user user = db.users.Where(x => x.username == username && x.password == password).First();
+
+                EN.User finded_user = new EN.User();
+
+                finded_user.IDUser = (int)user.id;
+                finded_user.Username = user.username;
+                finded_user.Password = user.password;
+                finded_user.Name = user.name;
+                finded_user.Fullname = user.last_name;
+                finded_user.Address = user.address;
+                finded_user.Email = user.mail;
+                finded_user.Phone = user.cell;
+                finded_user.Items = user.implements;
+                finded_user.City = user.city;
+
+                return finded_user;
+
+            }
+            catch (InvalidOperationException ex)
+            {
+                EN.User finded_user = new EN.User();
+
+                finded_user.IDUser = 0;
+                finded_user.Username = null;
+                finded_user.Name = null;
+                finded_user.Fullname = null;
+                finded_user.Password = null;
+                finded_user.Address = null;
+                finded_user.Email = null;
+                finded_user.Phone = null;
+                finded_user.Items = null;
+                finded_user.City = null;
+
+                return finded_user;
+                throw ex;
+            }
+        }
+
+        public EN.User authenticateUser(decimal? id)
+        {
+            try
+            {
+                DA.user user = db.users.Where(x => x.id == id).First();
 
                 EN.User finded_user = new EN.User();
 
@@ -87,26 +129,6 @@ namespace upb.mape.controller
                 return finded_user;
                 throw ex;
             }
-        }
-
-        public bool authenticateUser(String username, String password)
-        {
-            bool result = false;
-
-            try
-            {
-                DA.user user = db.users.Where(x => x.username == username && x.password == password).First();
-
-                result=true;
-
-            }
-            catch (InvalidOperationException ex)
-            {
-
-                result = false;
-            }
-
-            return result;
         }
 
         public bool editUser(EN.User user)
