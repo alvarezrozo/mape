@@ -10,12 +10,9 @@ $(document).ready(function() {
 	    url: 'http://projectmape.azurewebsites.net/api/Mapers/',
       success: function (data) {
 			     console.log(data);
+           for(i in data){
+             console.log(data[i])
+           }
 	    }
 	});
-  /*
-  var mycars = [{name:'Susita'}, {name:'BMW'}];
-for (i in mycars)
-{
-  document.write(mycars[i].name + "<br />");
-}*/
 });
