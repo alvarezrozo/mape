@@ -2,18 +2,20 @@ $( "#id_maper_1" ).click(function() {
     location.href="service_details.html?id=1";
 });
 
-$(document).load(function() {
+$(document).ready(function() {
 	var iduser = $.getURLParam("id");
 	$.ajax({
 	    type: 'GET',
 	    dataType: 'json',
-	    url: 'http://projectmape.azurewebsites.net/api/Users/?username='+username+'&password='+psw,
+	    url: 'http://projectmape.azurewebsites.net/api/Mapers/',
       success: function (data) {
-			if(data.Username != null){
-	    		location.href="home.html?id="+data.IDUser;
-	    	}else{
-	    		alert("Usario o contraseña incorrectos");
-	    	}
+			     console.log(data);
 	    }
 	});
+  /*
+  var mycars = [{name:'Susita'}, {name:'BMW'}];
+for (i in mycars)
+{
+  document.write(mycars[i].name + "<br />");
+}*/
 });
