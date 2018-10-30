@@ -8,6 +8,6 @@ namespace upb.mape.entity
 {
     public class Result
     {
-        public bool Answer { get; set; }
+        public String Answer { get; set; }
     }
 }

@@ -20,11 +20,11 @@ namespace upb.mape.controller
             {
                 var datos = new DA.date()
                 {
-                    idClient=date.IDClient,
-                    idMaper=date.IDMaper,
-                    date1=date.DateD,
-                    hour=date.DateT,
-                    status=date.Status
+                    idClient = date.IDClient,
+                    idMaper = date.IDMaper,
+                    date1 = date.DateD,
+                    hour = date.DateT,
+                    status = "En espera"
                 };
 
                 db.dates.Add(datos);
@@ -60,24 +60,25 @@ namespace upb.mape.controller
             return result;
         }
 
-        public List<EN.Date> getRequest(decimal id)
+        public List<EN.AcceptedDate> getRequest(decimal id)
         {
-            List<EN.Date> list = new List<EN.Date>();
+            List<EN.AcceptedDate> list = new List<EN.AcceptedDate>();
 
             try
             {
 
-                var l2query = db.dates.Where(x => x.idClient == id && x.status == "Aprobado");
+                var l2query = from dates in db.dates
+                              join mapers in db.mapers on dates.idMaper equals mapers.id
+                              where dates.idClient == id
+                              select new {Maper=mapers, Date=dates};
 
                 foreach(var item in l2query)
                 {
-                    EN.Date itemEN = new EN.Date();
-                    itemEN.IDDate = item.id;
-                    itemEN.IDClient = item.idClient;
-                    itemEN.IDMaper = item.idMaper;
-                    itemEN.DateD = item.date1;
-                    itemEN.DateT = item.hour;
-                    itemEN.Status = item.status;
+                    EN.AcceptedDate itemEN = new EN.AcceptedDate();
+                    itemEN.MaperName = item.Maper.name+" "+item.Maper.last_name;
+                    itemEN.Cost = item.Maper.cost;
+                    itemEN.DateD = item.Date.date1;
+                    itemEN.DateT = item.Date.hour;
                     list.Add(itemEN);
                 }
 

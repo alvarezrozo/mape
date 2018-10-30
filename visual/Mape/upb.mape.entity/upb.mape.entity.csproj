@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcceptedDate.cs" />
     <Compile Include="Date.cs" />
     <Compile Include="Maper.cs" />
     <Compile Include="MaperComment.cs" />

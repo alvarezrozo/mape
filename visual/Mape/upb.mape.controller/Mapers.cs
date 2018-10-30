@@ -32,7 +32,9 @@ namespace upb.mape.controller
                     address = maper.Address,
                     mail = maper.Email,
                     cell = maper.Phone,
-                    password = maper.Password
+                    password = maper.Password,
+                    rate=3,
+                    cost=maper.Cost
                 };
 
                 db.mapers.Add(datos);
@@ -50,15 +52,15 @@ namespace upb.mape.controller
             return result;
         }
 
-        public EN.Maper getMaper(String username)
+        public EN.Maper getMaper(decimal? id)
         {
             try
             {
-                DA.maper maper = db.mapers.Where(x => x.username == username).First();
+                DA.maper maper = db.mapers.Where(x => x.id == id).First();
 
                 EN.Maper finded_maper = new EN.Maper();
 
-                finded_maper.IDUser = (int)maper.id;
+                finded_maper.IDUser = maper.id;
                 finded_maper.Username = maper.username;
                 finded_maper.Name = maper.name;
                 finded_maper.Fullname = maper.last_name;
@@ -67,6 +69,8 @@ namespace upb.mape.controller
                 finded_maper.Phone = maper.cell;
                 finded_maper.Items = maper.implements;
                 finded_maper.City = maper.city;
+                finded_maper.Cost = maper.cost;
+                finded_maper.Rate = maper.rate;
 
                 return finded_maper;
 
@@ -109,6 +113,39 @@ namespace upb.mape.controller
             return result;
         }
 
+        public List<EN.Maper> allMapers()
+        {
+            List<EN.Maper> list = new List<EN.Maper>();
+
+            try
+            {
+
+                foreach (var item in db.mapers)
+                {
+                    EN.Maper itemEN = new EN.Maper();
+                    itemEN.IDUser = item.id;
+                    itemEN.Name = item.name;
+                    itemEN.Fullname = item.last_name;
+                    itemEN.City = item.city;
+                    itemEN.Cost = item.cost;
+                    itemEN.Email = item.mail;
+                    itemEN.Address = item.address;
+                    itemEN.Phone = item.cell;
+                    itemEN.Items = item.implements;
+                    itemEN.Rate = item.rate;
+                    list.Add(itemEN);
+                }
+
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+
+            return list;
+
+        }
+
         public bool editMaper(EN.Maper maper)
         {
             bool result = false;
@@ -125,6 +162,8 @@ namespace upb.mape.controller
                 edited_maper.cell = maper.Phone;
                 edited_maper.password = maper.Password;
                 edited_maper.city = maper.City;
+                edited_maper.rate = maper.Rate;
+                edited_maper.cost = maper.Cost;
 
                 db.SaveChanges();
 

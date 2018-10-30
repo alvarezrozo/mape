@@ -1,0 +1,17 @@
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\bin\Release\upb.mape.controller.dll.config
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\bin\Release\upb.mape.controller.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\bin\Release\upb.mape.controller.pdb
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\bin\Release\EntityFramework.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\bin\Release\upb.mape.broker.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\bin\Release\upb.mape.entity.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\bin\Release\upb.mape.broker.pdb
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\bin\Release\upb.mape.broker.dll.config
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\bin\Release\upb.mape.entity.pdb
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\bin\Release\upb.mape.entity.dll.config
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\bin\Release\EntityFramework.xml
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\obj\Release\upb.mape.controller.csprojResolveAssemblyReference.cache
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\obj\Release\upb.mape.controller.csproj.CoreCompileInputs.cache
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\obj\Release\upb.mape.controller.dll
+C:\Users\Andres\Documents\mape\visual\Mape\upb.mape.controller\obj\Release\upb.mape.controller.pdb

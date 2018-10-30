@@ -17,7 +17,7 @@ public class DatesController : ApiController
     }
 
     // GET api/<controller>/5
-    public List<EN.Date> Get(decimal userID)
+    public List<EN.AcceptedDate> Get(decimal userID)
     {
         return controller.getRequest(userID);
     }

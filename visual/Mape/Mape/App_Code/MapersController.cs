@@ -12,16 +12,16 @@ public class MapersController : ApiController
     CT.Mapers controller = new CT.Mapers();
 
     // GET api/<controller>
-    public IEnumerable<string> Get()
+    public List<EN.Maper> Get()
     {
-        return new string[] { "value1", "value2" };
+        return controller.allMapers();
     }
 
     // GET api/<controller>/5
-    public EN.Maper Get(String username)
+    public EN.Maper Get(decimal? id)
     {
 
-        EN.Maper maper = controller.getMaper(username);
+        EN.Maper maper = controller.getMaper(id);
 
         return maper;
     }
@@ -30,9 +30,16 @@ public class MapersController : ApiController
     {
         bool result = controller.authenticateMaper(username, password);
 
+        String response = "False";
+
+        if (result)
+        {
+            response = "True";
+        }
+
         var answer = new EN.Result()
         {
-            Answer = result
+            Answer = response
         };
 
         return answer;

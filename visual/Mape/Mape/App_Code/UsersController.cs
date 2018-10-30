@@ -32,9 +32,16 @@ public class UsersController : ApiController
     {
         bool result = controller.authenticateUser(username, password);
 
+        String response = "False";
+
+        if (result)
+        {
+            response = "True";
+        }
+
         var answer = new EN.Result()
         {
-            Answer = result
+            Answer = response
         };
 
         return answer;

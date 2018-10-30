@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="mapeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="mapeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="comments_mapers">
           <Key>
             <PropertyRef Name="id" />
@@ -34,7 +34,7 @@
           <Property Name="idMaper" Type="numeric" Precision="18" Scale="0" Nullable="false" />
           <Property Name="date" Type="date" />
           <Property Name="hour" Type="time" Precision="7" />
-          <Property Name="status" Type="nchar" MaxLength="20" />
+          <Property Name="status" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="mapers">
           <Key>
@@ -50,6 +50,8 @@
           <Property Name="cell" Type="nchar" MaxLength="10" />
           <Property Name="mail" Type="varchar" MaxLength="50" />
           <Property Name="implements" Type="varchar" MaxLength="50" />
+          <Property Name="rate" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="cost" Type="money" />
         </EntityType>
         <EntityType Name="users">
           <Key>
@@ -137,8 +139,7 @@
             <End Role="dates" EntitySet="dates" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="mapeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -173,7 +174,7 @@
           <Property Name="idMaper" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="date1" Type="DateTime" Precision="0" />
           <Property Name="hour" Type="Time" Precision="7" />
-          <Property Name="status" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="user" Relationship="Self.FK_dates_dates" FromRole="dates" ToRole="users" />
           <NavigationProperty Name="maper" Relationship="Self.FK_dates_mapers" FromRole="dates" ToRole="mapers" />
         </EntityType>
@@ -193,6 +194,8 @@
           <Property Name="implements" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="comments_mapers" Relationship="Self.FK_comments_mapers_mapers" FromRole="mapers" ToRole="comments_mapers" />
           <NavigationProperty Name="dates" Relationship="Self.FK_dates_mapers" FromRole="mapers" ToRole="dates" />
+          <Property Name="rate" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="cost" Type="Decimal" Precision="19" Scale="4" />
         </EntityType>
         <EntityType Name="user">
           <Key>
@@ -325,6 +328,8 @@
           <EntitySetMapping Name="mapers">
             <EntityTypeMapping TypeName="mapeModel.maper">
               <MappingFragment StoreEntitySet="mapers">
+                <ScalarProperty Name="cost" ColumnName="cost" />
+                <ScalarProperty Name="rate" ColumnName="rate" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="username" ColumnName="username" />
                 <ScalarProperty Name="password" ColumnName="password" />
