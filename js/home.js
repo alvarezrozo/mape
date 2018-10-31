@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	var iduser = $.getURLParam("id");
-  console.log(iduser);
 
   $( "#service" ).click(function() {
     location.href="mapers.html?id="+iduser;
