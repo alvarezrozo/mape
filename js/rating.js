@@ -15,6 +15,9 @@ $(document).ready(function() {
           }
           prom /= cont;
           $(".global_container").append("<p class='global_text'>Puntaje global "+ Math.round(prom*10)/10 +"</p>");
+          $("#menu_back").click(function(){
+            location.href = "home.html?id="+idclient;
+          });
         }else{
     			alert("Usted no tiene comentarios");
     			location.href = "home.html?id="+idclient;
