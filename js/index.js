@@ -5,7 +5,7 @@ $( "#intro" ).click(function() {
 	    type: 'GET',
 	    dataType: 'json',
 	    url: 'http://projectmape.azurewebsites.net/api/Users/?username='+username+'&password='+psw,
-        success: function (data) {
+      success: function (data) {
 			if(data.Username != null){
 	    		location.href="home.html?id="+data.IDUser;
 	    	}else{
@@ -14,5 +14,3 @@ $( "#intro" ).click(function() {
 	    }
 	});
 });
-
-

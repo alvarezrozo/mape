@@ -1,16 +1,20 @@
-$( "#service" ).click(function() {
-  location.href="service.html";
-});
+$(document).ready(function() {
+	var iduser = $.getURLParam("id");
+  console.log(iduser);
 
-$( "#history" ).click(function() {
-  location.href="history.html";
-});
+  $( "#service" ).click(function() {
+    location.href="mapers.html?id="+iduser;
+  });
 
-$( "#dates" ).click(function() {
-  location.href="dates.html";
-});
+  $( "#history" ).click(function() {
+    location.href="history.html?id="+iduser;
+  });
 
-$( "#rating" ).click(function() {
-  location.href="rating.html";
-});
+  $( "#dates" ).click(function() {
+    location.href="dates.html?id="+iduser;
+  });
 
+  $( "#rating" ).click(function() {
+    location.href="rating.html?id="+iduser;
+  });
+});

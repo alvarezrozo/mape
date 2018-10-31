@@ -94,23 +94,48 @@ namespace upb.mape.controller
             }
         }
 
-        public bool authenticateMaper(String username, String password)
+        public EN.Maper authenticateMaper(String username, String password)
         {
-            bool result = false;
-
+            EN.Maper finded_maper = new EN.Maper();
             try
             {
                 DA.maper maper = db.mapers.Where(x => x.username == username && x.password == password).First();
 
-                result = true;
+                
+
+                finded_maper.IDUser = maper.id;
+                finded_maper.Username = maper.username;
+                finded_maper.Name = maper.name;
+                finded_maper.Fullname = maper.last_name;
+                finded_maper.Password = maper.password;
+                finded_maper.Address = maper.address;
+                finded_maper.Email = maper.mail;
+                finded_maper.Phone = maper.cell;
+                finded_maper.Items = maper.implements;
+                finded_maper.City = maper.city;
+                finded_maper.Cost = maper.cost;
+                finded_maper.Rate = maper.rate;
+
+                return finded_maper;
 
             }
             catch (InvalidOperationException ex)
             {
-                result = false;
-            }
+                EN.Maper finded_user = new EN.Maper();
 
-            return result;
+                finded_user.IDUser = 0;
+                finded_user.Username = null;
+                finded_user.Name = null;
+                finded_user.Fullname = null;
+                finded_user.Password = null;
+                finded_user.Address = null;
+                finded_user.Email = null;
+                finded_user.Phone = null;
+                finded_user.Items = null;
+                finded_user.City = null;
+                return finded_user;
+                throw ex;
+            }
         }
 
         public List<EN.Maper> allMapers()
