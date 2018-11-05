@@ -13,6 +13,7 @@ body{
 
 p{
     font-family: 'Josefin Sans';
+		cursor:default;
 }
 
 .titulo{
