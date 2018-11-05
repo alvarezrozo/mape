@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,6 +61,102 @@ namespace upb.mape.controller
             return result;
         }
 
+        public List<EN.AcceptedDate> getDatesWait(decimal? id)
+        {
+            List<EN.AcceptedDate> list = new List<EN.AcceptedDate>();
+
+            try
+            {
+
+                var l2query = from dates in db.dates
+                              join mapers in db.mapers on dates.idMaper equals mapers.id
+                              where dates.idMaper == id && dates.status == "En espera"
+                              select new { Maper = mapers, Date = dates };
+
+                foreach (var item in l2query)
+                {
+                    EN.AcceptedDate itemEN = new EN.AcceptedDate();
+                    itemEN.MaperName = item.Maper.name + " " + item.Maper.last_name;
+                    itemEN.Cost = item.Maper.cost;
+                    itemEN.DateD = item.Date.date1;
+                    itemEN.DateT = item.Date.hour;
+                    list.Add(itemEN);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return list;
+        }
+
+        public List<EN.AcceptedDate> getDatesAccept(decimal? id)
+        {
+            List<EN.AcceptedDate> list = new List<EN.AcceptedDate>();
+
+            try
+            {
+
+                var l2query = from dates in db.dates
+                              join mapers in db.mapers on dates.idMaper equals mapers.id
+                              where dates.idMaper == id && dates.status == "Aceptada" && dates.date1 >= System.DateTime.Now
+                              select new { Maper = mapers, Date = dates };
+
+                foreach (var item in l2query)
+                {
+                    EN.AcceptedDate itemEN = new EN.AcceptedDate();
+                    itemEN.MaperName = item.Maper.name + " " + item.Maper.last_name;
+                    itemEN.Cost = item.Maper.cost;
+                    itemEN.DateD = item.Date.date1;
+                    itemEN.DateT = item.Date.hour;
+                    list.Add(itemEN);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return list;
+        }
+
+        public List<EN.AcceptedDate> getDatesAcceptPast(decimal? id)
+        {
+            List<EN.AcceptedDate> list = new List<EN.AcceptedDate>();
+
+            try
+            {
+
+                var l2query = from dates in db.dates
+                              join mapers in db.mapers on dates.idMaper equals mapers.id
+                              where dates.idMaper == id && dates.status == "Aceptada" && dates.date1 < System.DateTime.Now
+                              select new { Maper = mapers, Date = dates };
+
+                foreach (var item in l2query)
+                {
+                    EN.AcceptedDate itemEN = new EN.AcceptedDate();
+                    itemEN.MaperName = item.Maper.name + " " + item.Maper.last_name;
+                    itemEN.Cost = item.Maper.cost;
+                    itemEN.DateD = item.Date.date1;
+                    itemEN.DateT = item.Date.hour;
+                    list.Add(itemEN);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return list;
+        }
+
         public List<EN.AcceptedDate> getRequest(decimal id)
         {
             List<EN.AcceptedDate> list = new List<EN.AcceptedDate>();
@@ -69,7 +166,7 @@ namespace upb.mape.controller
 
                 var l2query = from dates in db.dates
                               join mapers in db.mapers on dates.idMaper equals mapers.id
-                              where dates.idClient == id
+                              where dates.idClient == id && dates.status=="Aceptada" && dates.date1 >= System.DateTime.Now
                               select new {Maper=mapers, Date=dates};
 
                 foreach(var item in l2query)
@@ -83,6 +180,38 @@ namespace upb.mape.controller
                 }
 
             }catch(Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return list;
+        }
+
+        public List<EN.AcceptedDate> getRequestPast(decimal id)
+        {
+            List<EN.AcceptedDate> list = new List<EN.AcceptedDate>();
+
+            try
+            {
+
+                var l2query = from dates in db.dates
+                              join mapers in db.mapers on dates.idMaper equals mapers.id
+                              where dates.idClient == id && dates.status == "Aceptada" && dates.date1 < System.DateTime.Now
+                              select new { Maper = mapers, Date = dates };
+
+                foreach (var item in l2query)
+                {
+                    EN.AcceptedDate itemEN = new EN.AcceptedDate();
+                    itemEN.MaperName = item.Maper.name + " " + item.Maper.last_name;
+                    itemEN.Cost = item.Maper.cost;
+                    itemEN.DateD = item.Date.date1;
+                    itemEN.DateT = item.Date.hour;
+                    list.Add(itemEN);
+                }
+
+            }
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -105,7 +234,6 @@ namespace upb.mape.controller
                 date.DateD = item.date1;
                 date.DateT = item.hour;
                 date.Status = item.status;
-
             }
             catch(Exception ex)
             {

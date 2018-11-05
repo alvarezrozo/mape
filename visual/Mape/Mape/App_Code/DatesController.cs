@@ -22,9 +22,29 @@ public class DatesController : ApiController
         return controller.getRequest(userID);
     }
 
-    public EN.Date Get(decimal dateID, String dateT)
+    public List<EN.AcceptedDate> Get(decimal userID, decimal f)
     {
-        return controller.getDate(dateID);
+        return controller.getRequestPast(userID);
+    }
+
+    public List<EN.AcceptedDate> Get(decimal id, String parameter)
+    {
+        List<EN.AcceptedDate> list = new List<EN.AcceptedDate>();
+
+        if (parameter.Equals("Espera"))
+        {
+            list= controller.getDatesWait(id);
+        }
+        if (parameter.Equals("Aceptada"))
+        {
+            list = controller.getDatesAccept(id);
+        }
+        if (parameter.Equals("Past"))
+        {
+            list = controller.getDatesAcceptPast(id);
+        }
+
+        return list;
     }
 
     // POST api/<controller>

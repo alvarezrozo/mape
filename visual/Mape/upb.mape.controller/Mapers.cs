@@ -187,7 +187,6 @@ namespace upb.mape.controller
                 edited_maper.cell = maper.Phone;
                 edited_maper.password = maper.Password;
                 edited_maper.city = maper.City;
-                edited_maper.rate = maper.Rate;
                 edited_maper.cost = maper.Cost;
 
                 db.SaveChanges();
