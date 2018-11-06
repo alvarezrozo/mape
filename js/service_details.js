@@ -12,22 +12,21 @@ $(document).ready(function() {
          		location.href = "mapers.html?id="+idclient;
          	});
          	$(".menu_check").click(function(){
-         		console.log($("#datepicker").val());
          		var params = {
          			"IDClient":idclient,
          			"IDMaper":idmaper,
          			"DateD":$("#datepicker").val(),
          			"DateT":$("#format").val()
          		};
-         		$.ajax({
-         			data: params,
-         			url: 'http://projectmape.azurewebsites.net/api/Dates/',
-         			type: 'post',
-				    success: function (response) {
-			        	alert("Cita asignada con éxito");
-    					location.href = "home.html?id="+idclient;
-			        }
-				});
+            	$.ajax({
+            			data: params,
+            			url: 'http://projectmape.azurewebsites.net/api/Dates/',
+            			type: 'post',
+   				     success: function (response) {
+   			        	alert("Cita asignada con éxito");
+       					location.href = "home.html?id="+idclient;
+   			        }
+   				});
          	});
     	}
 	});
