@@ -52,7 +52,7 @@ $(document).ready(function() {
             });
       		}else{
       			alert("No hay solicitud asignadas");
-      			location.href = "home.html?id="+idmaper;
+      			location.href = "home_mp.html?id="+idmaper;
       		}
        		
     	}
