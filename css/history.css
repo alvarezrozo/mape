@@ -86,7 +86,7 @@ body{
     padding-top: 10px;
 }
 
-.map_name{
+.map_name, .map_date{
     color: #fff;
     font-family: 'Josefin Sans';
     font-size: 20px;
