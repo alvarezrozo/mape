@@ -116,3 +116,8 @@ body{
     font-size: 20px;
     display: inline-block;
 }
+
+.value{
+    color:#fff;
+    font-size: 22px;
+}
