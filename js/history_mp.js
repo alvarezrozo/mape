@@ -1,12 +1,13 @@
 $(document).ready(function() {
   $("#menu_back").click(function(){
-    location.href = "home.html?id="+idclient;
+    location.href = "home_mp.html?id="+idmaper;
   });
-	var idclient = $.getURLParam("id");
+	var idmaper = $.getURLParam("id");
 	$.ajax({
 	    type: 'GET',
 	    dataType: 'json',
-	    url: 'http://projectmape.azurewebsites.net/api/Dates/?userID='+idclient,
+	    url: 'http://projectmape.azurewebsites.net/api/Dates/?id='+idmaper+'&parameter=Past',
+
       	success: function (data) {
 			    if(data.length != 0){
       			for(i in data){
@@ -14,7 +15,7 @@ $(document).ready(function() {
             }
       		}else{
       			alert("No hay citas asignadas");
-      			location.href = "home.html?id="+idclient;
+      			location.href = "home_mp.html?id="+idmaper;
       		}
        		
     	}

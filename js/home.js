@@ -1,6 +1,10 @@
 $(document).ready(function() {
 	var iduser = $.getURLParam("id");
 
+  $( "#menu_user" ).click(function() {
+    location.href="user.html?id="+iduser;
+  });
+
   $( "#service" ).click(function() {
     location.href="mapers.html?id="+iduser;
   });
