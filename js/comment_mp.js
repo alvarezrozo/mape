@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var idUser = $.getURLParam("idUser");
+	var idUser = $.getURLParam("idClient");
 	var idmaper = $.getURLParam("idMaper");
    var d = new Date();
    var today = d.getDate() + "/" + (d.getMonth()+1) + "/" + d.getFullYear(); 
