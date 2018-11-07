@@ -51,7 +51,6 @@
     <Property Name="implements" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="comments_mapers" Relationship="Self.FK_comments_mapers_mapers" FromRole="mapers" ToRole="comments_mapers" />
     <NavigationProperty Name="dates" Relationship="Self.FK_dates_mapers" FromRole="mapers" ToRole="dates" />
-    <Property Name="rate" Type="Decimal" Precision="18" Scale="0" />
     <Property Name="cost" Type="Decimal" Precision="19" Scale="4" />
   </EntityType>
   <EntityType Name="user">

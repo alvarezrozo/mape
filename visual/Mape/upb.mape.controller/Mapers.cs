@@ -33,7 +33,6 @@ namespace upb.mape.controller
                     mail = maper.Email,
                     cell = maper.Phone,
                     password = maper.Password,
-                    rate=3,
                     cost=maper.Cost
                 };
 
@@ -62,6 +61,7 @@ namespace upb.mape.controller
 
                 finded_maper.IDUser = maper.id;
                 finded_maper.Username = maper.username;
+                finded_maper.Password = maper.password;
                 finded_maper.Name = maper.name;
                 finded_maper.Fullname = maper.last_name;
                 finded_maper.Address = maper.address;
@@ -70,7 +70,7 @@ namespace upb.mape.controller
                 finded_maper.Items = maper.implements;
                 finded_maper.City = maper.city;
                 finded_maper.Cost = maper.cost;
-                finded_maper.Rate = maper.rate;
+ 
 
                 return finded_maper;
 
@@ -114,7 +114,6 @@ namespace upb.mape.controller
                 finded_maper.Items = maper.implements;
                 finded_maper.City = maper.city;
                 finded_maper.Cost = maper.cost;
-                finded_maper.Rate = maper.rate;
 
                 return finded_maper;
 
@@ -157,7 +156,6 @@ namespace upb.mape.controller
                     itemEN.Address = item.address;
                     itemEN.Phone = item.cell;
                     itemEN.Items = item.implements;
-                    itemEN.Rate = item.rate;
                     list.Add(itemEN);
                 }
 

@@ -70,13 +70,15 @@ namespace upb.mape.controller
 
                 var l2query = from dates in db.dates
                               join mapers in db.mapers on dates.idMaper equals mapers.id
+                              join users in db.users on dates.idClient equals users.id
                               where dates.idMaper == id && dates.status == "En espera"
-                              select new { Maper = mapers, Date = dates };
+                              select new { Maper = mapers, Date = dates, User=users };
 
                 foreach (var item in l2query)
                 {
                     EN.AcceptedDate itemEN = new EN.AcceptedDate();
-                    itemEN.MaperName = item.Maper.name + " " + item.Maper.last_name;
+                    itemEN.IDDate = item.Date.id;
+                    itemEN.MaperName = item.User.name + " " + item.User.last_name;
                     itemEN.Cost = item.Maper.cost;
                     itemEN.DateD = item.Date.date1;
                     itemEN.DateT = item.Date.hour;
@@ -102,13 +104,15 @@ namespace upb.mape.controller
 
                 var l2query = from dates in db.dates
                               join mapers in db.mapers on dates.idMaper equals mapers.id
+                              join users in db.users on dates.idClient equals users.id
                               where dates.idMaper == id && dates.status == "Aceptada" && dates.date1 >= System.DateTime.Now
-                              select new { Maper = mapers, Date = dates };
+                              select new { Maper = mapers, Date = dates, User=users };
 
                 foreach (var item in l2query)
                 {
                     EN.AcceptedDate itemEN = new EN.AcceptedDate();
-                    itemEN.MaperName = item.Maper.name + " " + item.Maper.last_name;
+                    itemEN.IDDate = item.Date.id;
+                    itemEN.MaperName = item.User.name + " " + item.User.last_name;
                     itemEN.Cost = item.Maper.cost;
                     itemEN.DateD = item.Date.date1;
                     itemEN.DateT = item.Date.hour;
@@ -134,13 +138,15 @@ namespace upb.mape.controller
 
                 var l2query = from dates in db.dates
                               join mapers in db.mapers on dates.idMaper equals mapers.id
+                              join users in db.users on dates.idClient equals users.id
                               where dates.idMaper == id && dates.status == "Aceptada" && dates.date1 < System.DateTime.Now
-                              select new { Maper = mapers, Date = dates };
+                              select new { Maper = mapers, Date = dates, User=users };
 
                 foreach (var item in l2query)
                 {
                     EN.AcceptedDate itemEN = new EN.AcceptedDate();
-                    itemEN.MaperName = item.Maper.name + " " + item.Maper.last_name;
+                    itemEN.IDDate = item.Date.id;
+                    itemEN.MaperName = item.User.name + " " + item.User.last_name;
                     itemEN.Cost = item.Maper.cost;
                     itemEN.DateD = item.Date.date1;
                     itemEN.DateT = item.Date.hour;
@@ -166,13 +172,15 @@ namespace upb.mape.controller
 
                 var l2query = from dates in db.dates
                               join mapers in db.mapers on dates.idMaper equals mapers.id
+                              join users in db.users on dates.idClient equals users.id
                               where dates.idClient == id && dates.status=="Aceptada" && dates.date1 >= System.DateTime.Now
-                              select new {Maper=mapers, Date=dates};
+                              select new {Maper=mapers, Date=dates, User=users};
 
                 foreach(var item in l2query)
                 {
                     EN.AcceptedDate itemEN = new EN.AcceptedDate();
-                    itemEN.MaperName = item.Maper.name+" "+item.Maper.last_name;
+                    itemEN.IDDate = item.Date.id;
+                    itemEN.MaperName = item.Maper.name + " " + item.Maper.last_name;
                     itemEN.Cost = item.Maper.cost;
                     itemEN.DateD = item.Date.date1;
                     itemEN.DateT = item.Date.hour;
@@ -197,12 +205,14 @@ namespace upb.mape.controller
 
                 var l2query = from dates in db.dates
                               join mapers in db.mapers on dates.idMaper equals mapers.id
+                              join users in db.users on dates.idClient equals users.id
                               where dates.idClient == id && dates.status == "Aceptada" && dates.date1 < System.DateTime.Now
-                              select new { Maper = mapers, Date = dates };
+                              select new { Maper = mapers, Date = dates, User=users };
 
                 foreach (var item in l2query)
                 {
                     EN.AcceptedDate itemEN = new EN.AcceptedDate();
+                    itemEN.IDDate = item.Date.id;
                     itemEN.MaperName = item.Maper.name + " " + item.Maper.last_name;
                     itemEN.Cost = item.Maper.cost;
                     itemEN.DateD = item.Date.date1;

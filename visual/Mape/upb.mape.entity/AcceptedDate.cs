@@ -8,6 +8,7 @@ namespace upb.mape.entity
 {
     public class AcceptedDate
     {
+        public decimal IDDate { get; set; }
         public String MaperName { get; set; }
 
         public decimal? Cost { get; set; }

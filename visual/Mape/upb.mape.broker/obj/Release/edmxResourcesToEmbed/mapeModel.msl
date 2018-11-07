@@ -39,7 +39,6 @@
       <EntityTypeMapping TypeName="mapeModel.maper">
         <MappingFragment StoreEntitySet="mapers">
           <ScalarProperty Name="cost" ColumnName="cost" />
-          <ScalarProperty Name="rate" ColumnName="rate" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="username" ColumnName="username" />
           <ScalarProperty Name="password" ColumnName="password" />
