@@ -1,26 +1,26 @@
 $(document).ready(function() {
-	var idclient = $.getURLParam("idClient");
+	var idUser = $.getURLParam("idUser");
 	var idmaper = $.getURLParam("idMaper");
    var d = new Date();
    var today = d.getDate() + "/" + (d.getMonth()+1) + "/" + d.getFullYear(); 
    $("#menu_des").click(function(){
-      location.href = "history.html?id="+idclient;
+      location.href = "history_mp.html?id="+idmaper;
    });
    $(".menu_check").click(function(){
       if($("#message").val() != "" && $("#rating").val() != ""){
          var params = {
-            "IDMaper":idmaper,
+            "IDClient":idUser,
             "Comment":$("#message").val(),
             "DateD":today,
             "Value":$("#rating").val()
          };
          $.ajax({
                data: params,
-               url: 'http://projectmape.azurewebsites.net/api/MapersComments/',
+               url: 'http://projectmape.azurewebsites.net/api/UsersComments/',
                type: 'post',
               success: function (response) {
                alert("Comentario realizado");
-               location.href = "home.html?id="+idclient;
+               location.href = "home_mp.html?id="+idmaper;
               }
          });
 }else{
