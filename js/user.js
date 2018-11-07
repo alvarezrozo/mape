@@ -1,13 +1,13 @@
 $(document).ready(function() {
-   var idmaper = $.getURLParam("id");
+   var iduser = $.getURLParam("id");
    $("#menu_des").click(function(){
-      location.href = "home_mp.html?id="+idmaper;
+      location.href = "home.html?id="+iduser;
    });
 
    $.ajax({
       type: 'GET',
       dataType: 'json',
-      url: 'http://projectmape.azurewebsites.net/api/Mapers/?id='+idmaper,
+      url: 'http://projectmape.azurewebsites.net/api/Users/?id='+iduser,
       success: function (data) {
          $("#userName").val(data.Username);
          $("#name").val(data.Name);
@@ -16,7 +16,6 @@ $(document).ready(function() {
          $("#mail").val(data.Email);
          $("#address").val(data.Address);
          $("#phone").val(data.Phone);
-         $("#cost").val(data.Cost);
          $("#pss").val(data.Password);
          $("#implements").val(data.Items);
          $("#city").val(data.City);
@@ -25,10 +24,10 @@ $(document).ready(function() {
    });
 
 	$(".menu_check").click(function(){
-      if($("#userName").val() != "" && $("#name").val() != "" && $("#cost").val() != "" && $("#fullName").val() != "" && $("#password").val() != "" && $("#mail").val() != "" && $("#address").val() != "" && $("#phone").val() != "" && $("#implements").val() != "" && $("#city").val() != ""){
+      if($("#userName").val() != "" && $("#name").val() != "" && $("#fullName").val() != "" && $("#password").val() != "" && $("#mail").val() != "" && $("#address").val() != "" && $("#phone").val() != "" && $("#implements").val() != "" && $("#city").val() != ""){
          if($("#password").val() == $("#pss").val()){
             var params = {
-               "IDUser": idmaper,
+               "IDUser": iduser,
                "Username": $("#userName").val(),
                "Name": $("#name").val(),
                "Fullname": $("#fullName").val(),
@@ -36,17 +35,16 @@ $(document).ready(function() {
                "Email": $("#mail").val(),
                "Address": $("#address").val(),
                "Phone": $("#phone").val(),
-               "Cost": $("#cost").val(),
                "Items": $("#implements").val(),
                "City": $("#city").val()
             };
             $.ajax({
                   data: params,
-                  url: 'http://projectmape.azurewebsites.net/api/Mapers/?id='+idmaper,
+                  url: 'http://projectmape.azurewebsites.net/api/Users/?id='+iduser,
                   type: 'put',
                   success: function (response) {
                      alert("Usuario actualizado con éxito");
-                     location.href = "home_mp.html?id="+idmaper;
+                     location.href = "home.html?id="+iduser;
                  }
             });
          }else{
