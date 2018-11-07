@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $("#menu_back").click(function(){
-    location.href = "home.html?id="+idmaper;
+    location.href = "home_mp.html?id="+idmaper;
   });
 	var idmaper = $.getURLParam("id");
 	$.ajax({
@@ -15,7 +15,7 @@ $(document).ready(function() {
             }
       		}else{
       			alert("No hay citas asignadas");
-      			location.href = "home.html?id="+idmaper;
+      			location.href = "home_mp.html?id="+idmaper;
       		}
        		
     	}
