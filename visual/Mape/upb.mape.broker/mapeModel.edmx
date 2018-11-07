@@ -50,7 +50,6 @@
           <Property Name="cell" Type="nchar" MaxLength="10" />
           <Property Name="mail" Type="varchar" MaxLength="50" />
           <Property Name="implements" Type="varchar" MaxLength="50" />
-          <Property Name="rate" Type="numeric" Precision="18" Scale="0" />
           <Property Name="cost" Type="money" />
         </EntityType>
         <EntityType Name="users">
@@ -194,7 +193,6 @@
           <Property Name="implements" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="comments_mapers" Relationship="Self.FK_comments_mapers_mapers" FromRole="mapers" ToRole="comments_mapers" />
           <NavigationProperty Name="dates" Relationship="Self.FK_dates_mapers" FromRole="mapers" ToRole="dates" />
-          <Property Name="rate" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="cost" Type="Decimal" Precision="19" Scale="4" />
         </EntityType>
         <EntityType Name="user">
@@ -329,7 +327,6 @@
             <EntityTypeMapping TypeName="mapeModel.maper">
               <MappingFragment StoreEntitySet="mapers">
                 <ScalarProperty Name="cost" ColumnName="cost" />
-                <ScalarProperty Name="rate" ColumnName="rate" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="username" ColumnName="username" />
                 <ScalarProperty Name="password" ColumnName="password" />

@@ -100,6 +100,7 @@ namespace upb.mape.controller
 
                 finded_user.IDUser = (int)user.id;
                 finded_user.Username = user.username;
+                finded_user.Password = user.password;
                 finded_user.Name = user.name;
                 finded_user.Fullname = user.last_name;
                 finded_user.Address = user.address;
