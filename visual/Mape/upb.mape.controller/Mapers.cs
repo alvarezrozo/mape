@@ -33,7 +33,8 @@ namespace upb.mape.controller
                     mail = maper.Email,
                     cell = maper.Phone,
                     password = maper.Password,
-                    cost=maper.Cost
+                    cost=maper.Cost,
+                    rating=5
                 };
 
                 db.mapers.Add(datos);
@@ -70,7 +71,7 @@ namespace upb.mape.controller
                 finded_maper.Items = maper.implements;
                 finded_maper.City = maper.city;
                 finded_maper.Cost = maper.cost;
- 
+                finded_maper.Rating = maper.rating;
 
                 return finded_maper;
 
@@ -114,6 +115,7 @@ namespace upb.mape.controller
                 finded_maper.Items = maper.implements;
                 finded_maper.City = maper.city;
                 finded_maper.Cost = maper.cost;
+                finded_maper.Rating = maper.rating;
 
                 return finded_maper;
 
@@ -149,6 +151,8 @@ namespace upb.mape.controller
                     EN.Maper itemEN = new EN.Maper();
                     itemEN.IDUser = item.id;
                     itemEN.Name = item.name;
+                    itemEN.Username = item.username;
+                    itemEN.Password = item.password;
                     itemEN.Fullname = item.last_name;
                     itemEN.City = item.city;
                     itemEN.Cost = item.cost;
@@ -156,6 +160,7 @@ namespace upb.mape.controller
                     itemEN.Address = item.address;
                     itemEN.Phone = item.cell;
                     itemEN.Items = item.implements;
+                    itemEN.Rating = item.rating;
                     list.Add(itemEN);
                 }
 
@@ -186,6 +191,28 @@ namespace upb.mape.controller
                 edited_maper.password = maper.Password;
                 edited_maper.city = maper.City;
                 edited_maper.cost = maper.Cost;
+
+                db.SaveChanges();
+
+                result = true;
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw ex;
+            }
+
+            return result;
+        }
+
+        public bool updateRating(EN.Maper maper)
+        {
+            bool result = false;
+
+            try
+            {
+                DA.maper edited_maper = db.mapers.Where(x => x.id == maper.IDUser).First();
+
+                edited_maper.rating = maper.Rating;
 
                 db.SaveChanges();
 

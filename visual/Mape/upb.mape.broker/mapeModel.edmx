@@ -51,6 +51,7 @@
           <Property Name="mail" Type="varchar" MaxLength="50" />
           <Property Name="implements" Type="varchar" MaxLength="50" />
           <Property Name="cost" Type="money" />
+          <Property Name="rating" Type="numeric" Precision="2" Scale="1" />
         </EntityType>
         <EntityType Name="users">
           <Key>
@@ -66,6 +67,7 @@
           <Property Name="cell" Type="nchar" MaxLength="10" />
           <Property Name="mail" Type="varchar" MaxLength="50" />
           <Property Name="implements" Type="varchar" MaxLength="50" />
+          <Property Name="rating" Type="numeric" Precision="2" Scale="1" />
         </EntityType>
         <Association Name="FK_comments_mapers_mapers">
           <End Role="mapers" Type="Self.mapers" Multiplicity="1" />
@@ -194,6 +196,7 @@
           <NavigationProperty Name="comments_mapers" Relationship="Self.FK_comments_mapers_mapers" FromRole="mapers" ToRole="comments_mapers" />
           <NavigationProperty Name="dates" Relationship="Self.FK_dates_mapers" FromRole="mapers" ToRole="dates" />
           <Property Name="cost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="rating" Type="Decimal" Precision="2" Scale="1" />
         </EntityType>
         <EntityType Name="user">
           <Key>
@@ -211,6 +214,7 @@
           <Property Name="implements" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="comments_users" Relationship="Self.FK_comments_users_users" FromRole="users" ToRole="comments_users" />
           <NavigationProperty Name="dates" Relationship="Self.FK_dates_dates" FromRole="users" ToRole="dates" />
+          <Property Name="rating" Type="Decimal" Precision="2" Scale="1" />
         </EntityType>
         <Association Name="FK_comments_mapers_mapers">
           <End Role="mapers" Type="Self.maper" Multiplicity="1" />
@@ -326,6 +330,7 @@
           <EntitySetMapping Name="mapers">
             <EntityTypeMapping TypeName="mapeModel.maper">
               <MappingFragment StoreEntitySet="mapers">
+                <ScalarProperty Name="rating" ColumnName="rating" />
                 <ScalarProperty Name="cost" ColumnName="cost" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="username" ColumnName="username" />
@@ -343,6 +348,7 @@
           <EntitySetMapping Name="users">
             <EntityTypeMapping TypeName="mapeModel.user">
               <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="rating" ColumnName="rating" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="username" ColumnName="username" />
                 <ScalarProperty Name="password" ColumnName="password" />

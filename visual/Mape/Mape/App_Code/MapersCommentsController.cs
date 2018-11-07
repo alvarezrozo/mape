@@ -30,8 +30,10 @@ public class MapersCommentsController : ApiController
     }
 
     // PUT api/<controller>/5
-    public void Put(int id, [FromBody]string value)
+    public void Put(EN.Maper maper)
     {
+        CT.Mapers mapersAux = new CT.Mapers();
+        mapersAux.updateRating(maper);
     }
 
     // DELETE api/<controller>/5

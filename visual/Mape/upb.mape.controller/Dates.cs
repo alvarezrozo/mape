@@ -78,6 +78,7 @@ namespace upb.mape.controller
                 {
                     EN.AcceptedDate itemEN = new EN.AcceptedDate();
                     itemEN.IDDate = item.Date.id;
+                    itemEN.IDMaper = item.User.id;
                     itemEN.MaperName = item.User.name + " " + item.User.last_name;
                     itemEN.Cost = item.Maper.cost;
                     itemEN.DateD = item.Date.date1;
@@ -112,6 +113,7 @@ namespace upb.mape.controller
                 {
                     EN.AcceptedDate itemEN = new EN.AcceptedDate();
                     itemEN.IDDate = item.Date.id;
+                    itemEN.IDMaper = item.User.id;
                     itemEN.MaperName = item.User.name + " " + item.User.last_name;
                     itemEN.Cost = item.Maper.cost;
                     itemEN.DateD = item.Date.date1;
@@ -146,6 +148,7 @@ namespace upb.mape.controller
                 {
                     EN.AcceptedDate itemEN = new EN.AcceptedDate();
                     itemEN.IDDate = item.Date.id;
+                    itemEN.IDMaper = item.User.id;
                     itemEN.MaperName = item.User.name + " " + item.User.last_name;
                     itemEN.Cost = item.Maper.cost;
                     itemEN.DateD = item.Date.date1;
@@ -180,6 +183,7 @@ namespace upb.mape.controller
                 {
                     EN.AcceptedDate itemEN = new EN.AcceptedDate();
                     itemEN.IDDate = item.Date.id;
+                    itemEN.IDMaper = item.Maper.id;
                     itemEN.MaperName = item.Maper.name + " " + item.Maper.last_name;
                     itemEN.Cost = item.Maper.cost;
                     itemEN.DateD = item.Date.date1;
@@ -213,6 +217,7 @@ namespace upb.mape.controller
                 {
                     EN.AcceptedDate itemEN = new EN.AcceptedDate();
                     itemEN.IDDate = item.Date.id;
+                    itemEN.IDMaper = item.Maper.id;
                     itemEN.MaperName = item.Maper.name + " " + item.Maper.last_name;
                     itemEN.Cost = item.Maper.cost;
                     itemEN.DateD = item.Date.date1;

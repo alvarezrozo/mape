@@ -52,6 +52,7 @@
     <NavigationProperty Name="comments_mapers" Relationship="Self.FK_comments_mapers_mapers" FromRole="mapers" ToRole="comments_mapers" />
     <NavigationProperty Name="dates" Relationship="Self.FK_dates_mapers" FromRole="mapers" ToRole="dates" />
     <Property Name="cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="rating" Type="Decimal" Precision="2" Scale="1" />
   </EntityType>
   <EntityType Name="user">
     <Key>
@@ -69,6 +70,7 @@
     <Property Name="implements" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="comments_users" Relationship="Self.FK_comments_users_users" FromRole="users" ToRole="comments_users" />
     <NavigationProperty Name="dates" Relationship="Self.FK_dates_dates" FromRole="users" ToRole="dates" />
+    <Property Name="rating" Type="Decimal" Precision="2" Scale="1" />
   </EntityType>
   <Association Name="FK_comments_mapers_mapers">
     <End Role="mapers" Type="Self.maper" Multiplicity="1" />

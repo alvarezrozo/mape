@@ -38,6 +38,7 @@
     <EntitySetMapping Name="mapers">
       <EntityTypeMapping TypeName="mapeModel.maper">
         <MappingFragment StoreEntitySet="mapers">
+          <ScalarProperty Name="rating" ColumnName="rating" />
           <ScalarProperty Name="cost" ColumnName="cost" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="username" ColumnName="username" />
@@ -55,6 +56,7 @@
     <EntitySetMapping Name="users">
       <EntityTypeMapping TypeName="mapeModel.user">
         <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="rating" ColumnName="rating" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="username" ColumnName="username" />
           <ScalarProperty Name="password" ColumnName="password" />

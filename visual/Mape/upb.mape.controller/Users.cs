@@ -31,7 +31,8 @@ namespace upb.mape.controller
                     address=user.Address,
                     mail=user.Email,
                     cell=user.Phone,
-                    password=user.Password
+                    password=user.Password,
+                    rating=5
                 };
 
                 db.users.Add(datos);
@@ -66,6 +67,7 @@ namespace upb.mape.controller
                 finded_user.Phone = user.cell;
                 finded_user.Items = user.implements;
                 finded_user.City = user.city;
+                finded_user.Rating = user.rating;
 
                 return finded_user;
 
@@ -108,6 +110,7 @@ namespace upb.mape.controller
                 finded_user.Phone = user.cell;
                 finded_user.Items = user.implements;
                 finded_user.City = user.city;
+                finded_user.Rating = user.rating;
 
                 return finded_user;
 
@@ -148,6 +151,28 @@ namespace upb.mape.controller
                 edited_user.cell = user.Phone;
                 edited_user.password = user.Password;
                 edited_user.city = user.City;
+
+                db.SaveChanges();
+
+                result = true;
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw ex;
+            }
+
+            return result;
+        }
+
+        public bool updateRating(EN.User user)
+        {
+            bool result = false;
+
+            try
+            {
+                DA.user edited_maper = db.users.Where(x => x.id == user.IDUser).First();
+
+                edited_maper.rating = user.Rating;
 
                 db.SaveChanges();
 

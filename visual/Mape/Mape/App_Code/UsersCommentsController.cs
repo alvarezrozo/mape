@@ -30,8 +30,10 @@ public class UsersCommentsController : ApiController
     }
 
     // PUT api/<controller>/5
-    public void Put(int id, [FromBody]string value)
+    public void Put(EN.User user)
     {
+        CT.Users userAux = new CT.Users();
+        userAux.updateRating(user);
     }
 
     // DELETE api/<controller>/5

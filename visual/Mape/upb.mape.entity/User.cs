@@ -30,5 +30,7 @@ namespace upb.mape.entity
 
         public String City { get; set; }
 
+        public decimal? Rating { get; set; }
+
     }
 }

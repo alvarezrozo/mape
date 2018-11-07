@@ -31,6 +31,7 @@ namespace upb.mape.broker
         public string cell { get; set; }
         public string mail { get; set; }
         public string implements { get; set; }
+        public Nullable<decimal> rating { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<comments_users> comments_users { get; set; }
