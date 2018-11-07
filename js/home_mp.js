@@ -18,6 +18,9 @@ $(document).ready(function() {
       }
   });
 
+  $("#menu_user").click(function(){
+    location.href = "user_mp.html?id="+idmaper;
+  });
   $( "#service" ).click(function() {
     location.href="requests.html?id="+idmaper;
   });
